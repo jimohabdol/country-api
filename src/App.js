@@ -6,7 +6,7 @@ import './css/skeleton.css'
 
 function App() {
   return (
-    <div >
+    <div className="container">
       <Layout>
         <p>test</p>
       </Layout>
