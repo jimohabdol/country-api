@@ -4,18 +4,22 @@ import { Country } from './Country';
 
 export const CountriesList = () => {
     const [countries, setcountries] = useState([]);
+    const [isLoading, setLoading] = useState(true)
     useEffect(() => {
         const fetchData = async () => {
             const response = await fetch("https://restcountries.eu/rest/v2/all") 
             const data = await response.json();
             setcountries(data)
         }  
-        fetchData();  
+        fetchData(); 
+        setLoading(false) 
     }, [])
 
     const items = countries.map(item => {
         return (<Country key={item.id} country={item}/>)
     })
+
+    let display = isLoading ? "loading..." : items
     return (
         <Auxiliary>
             <section className="container">
@@ -36,7 +40,7 @@ export const CountriesList = () => {
                     </div>
                 </div>
             </section>
-            <section>{items}</section>
+            <section>{display}</section>
         </Auxiliary>
     )
 }
