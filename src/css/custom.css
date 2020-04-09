@@ -43,10 +43,9 @@ main {
     background-color: #fff;
 }
 
-.dropdown ul {
-    display: none;
+.dropdown .open {
+    display: block;
     width: 100%;
-    padding: 20px;
     border-radius: 5px;
     box-shadow: var(--boxShadow);
     background-color: #fff;
@@ -56,10 +55,13 @@ main {
 
 .dropdown ul li {
     display: block;
+    padding: 10px 10px 10px 20px;
+    margin: 0;
+    width: 100%;
 }
 
-.dropdown:hover .dropdown ul  {
-    display: block;
+.dropdown .hide  {
+    display: none;
 }
 
 .dropdown:hover p {
