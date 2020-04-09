@@ -3,11 +3,12 @@ import { Layout } from './components/Layout/Layout';
 import {CountriesList} from './containers/CountriesList';
 import './css/normalize.css'
 import './css/skeleton.css'
+import './css/custom.css'
 
 
 function App() {
   return (
-    <div className="container">
+    <div className="">
       <Layout>
         <CountriesList />
       </Layout>

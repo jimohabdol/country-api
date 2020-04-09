@@ -40,7 +40,9 @@ export const CountriesList = () => {
                     </div>
                 </div>
             </section>
-            <section>{display}</section>
+            <section className="container">
+                <div className="row">{display}</div>
+            </section>
         </Auxiliary>
     )
 }
