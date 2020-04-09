@@ -6,7 +6,7 @@ import '../../css/skeleton.css'
 export const Layout = (props) => {
     return (
         <Auxiliary>
-            <header>
+            <div>
                 <nav className="row">
                     <div className="six columns">
                         <h1>Where in the world?</h1> 
@@ -17,7 +17,7 @@ export const Layout = (props) => {
                         Dark Mode
                     </div>
                 </nav>
-            </header>
+            </div>
             <main>
                 {props.children}
                 hello
