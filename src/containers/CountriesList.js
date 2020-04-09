@@ -24,11 +24,11 @@ export const CountriesList = () => {
         <Auxiliary>
             <section className="container">
                 <div className="row">
-                    <div className="six columns"> 
+                    <div className="ten columns"> 
                         <input className="search" id="search" type="text" placeholder="Search for a country" name="" value="" />
                     </div>
-                    <div className="dropdown" id="dropdown">
-                        Filter by Region
+                    <div className="two columns dropdown" id="dropdown">
+                        <p>Filter by Region</p>
 					<i className="fas fa-chevron-down" class="region"></i>
                         <ul>
                             <li>Africa</li>

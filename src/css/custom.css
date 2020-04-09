@@ -22,6 +22,57 @@ main {
     background-color: hsl(0, 0%, 98%);
 }
 
+.search {
+    box-shadow: var(--boxShadow);
+    border: 0;
+    width: 30%;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown p {
+    box-shadow: var(--boxShadow);
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.dropdown ul {
+    display: none;
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown ul li {
+    display: block;
+}
+
+.dropdown:hover .dropdown ul  {
+    display: block;
+}
+
+.dropdown:hover p {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.dropdown ul li:hover {
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.country {
+    margin-bottom: 4%;
+}
 .card {
     border: 1px solid #e1e1e1;
     background: white;

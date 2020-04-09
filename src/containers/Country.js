@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Country = ({country}) => {
     return (
-            <div className="three columns">
+            <div className="three columns country">
                 <div className='card'>
                     <div className="country-flag u-full-width">
                         <img src={country.flag} alt={country.name}/>
