@@ -17,22 +17,26 @@ export const CountriesList = () => {
         }  
         fetchData(); 
         
-    }, [countries, isOpen]);
+    }, [countries]);
 
     const handleSearch = e => {
         setSearch(e.target.value);
-        console.log(search)
-    }
+        console.log(search);
+    };
 
-    let items = countries.filter(item => {return item.name.toLowerCase().indexOf(search) !== -1}).map(item => {
-        return (<Country key={item.id} country={item}/>)
-    });
+    const handleFilter = e => {
+        setSearch(e);
+        console.log(search);
+    };
+
+    let items = countries.filter(item => {return ((item.region.toLowerCase().includes(search)) || item.name.toLowerCase().includes(search)) === true})
+        .map(item => {return (<Country key={item.id} country={item}/>)});
 
     let display = isLoading ? "loading..." : items;
     return (
         <Auxiliary>
             <section className="container">
-                <div className="row">
+                <div className="row filter-bar">
                     <div className="ten columns"> 
                         <input className="search" id="search" type="text" placeholder="Search for a country" name="search" value={search} onChange={handleSearch}/>
                     </div>
@@ -40,11 +44,11 @@ export const CountriesList = () => {
                         <p>Filter by Region</p>
 					<i className="fas fa-chevron-down" class="region"></i>
                         <ul className={isOpen ? "open" : "hide"}>
-                            <li>Africa</li>
-                            <li>America</li>
-                            <li>Asia</li>
-                            <li>Europe</li>
-                            <li>Oceania</li>
+                            <li onClick={() => handleFilter("africa")}>Africa</li>
+                            <li onClick={() => handleFilter("america")}>America</li>
+                            <li onClick={() => handleFilter("asia")}>Asia</li>
+                            <li onClick={() => handleFilter("europe")}>Europe</li>
+                            <li onClick={() => handleFilter("oceania")}>Oceania</li>
                         </ul>
                     </div>
                 </div>

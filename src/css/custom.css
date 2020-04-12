@@ -5,7 +5,6 @@
 header {
     padding: 20px 0 0 0;
     background: white;
-    text-align: center;
     box-shadow: var(--boxShadow);
 }
 /* @media (min-width: 750px) {
@@ -87,6 +86,7 @@ main {
 
 .country-flag img {
     width: 100%;
+    
 }
 
 .info-card {
@@ -94,4 +94,21 @@ main {
 }
 .info-card p {
     margin-bottom: 2px;
+}
+
+@media (min-width: 550px) {
+    .row.filter-bar {
+        padding: 4% 0 4% 4%;
+    }
+
+    .country-flag img {
+        height: 200px
+    }
+
+    .three.columns {
+        width: 21%;
+    }
+
+  .columns.country:first-child {
+    margin-left: 4%; }
 }

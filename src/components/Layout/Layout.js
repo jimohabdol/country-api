@@ -7,12 +7,12 @@ export const Layout = (props) => {
     return (
         <Auxiliary>
             <header className="header">
-                <div>
+                <div className="container">
                     <nav className="row">
-                        <div className="six columns">
+                        <div className="ten columns">
                             <h1>Where in the world?</h1> 
                         </div>
-                        <div className="six columns">
+                        <div className="two columns">
                         <i className="far fa-moon"></i>
                         <i className="fas fa-moon"></i>
                             Dark Mode
