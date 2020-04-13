@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Country = ({country}) => {
+export const Country = ({country, handleModal}) => {    
     return (
             <div className="three columns country">
-                <div className='card'>
+                <div className='card' onClick={() => handleModal(country.name)}>
                     <div className="country-flag u-full-width">
                         <img src={country.flag} alt={country.name}/>
                     </div>

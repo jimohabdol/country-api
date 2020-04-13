@@ -22,7 +22,6 @@ export const Layout = (props) => {
             </header>
             <main>
                 {props.children}
-                hello
             </main>
         </Auxiliary>
     )
