@@ -4,9 +4,17 @@
 
 body {
   /* margin: 0; */
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(200, 15%, 8%);
   font-family: 'Nunito Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  background-color: hsl(207, 26%, 17%);
+  color: hsl(0, 0%, 100%);
+  --backgroundColor: hsl(209, 23%, 22%);
 }
 
 code {

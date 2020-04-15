@@ -34,10 +34,10 @@ export const CountriesList = () => {
     
     const handleModal = (name) => {
         const country = countries.filter(item =>item.name.includes(name) === true)
-        setInfo(country);
+        setInfo(country[0]);
         setModal(true);
         console.log(info);
-    }
+    };
 
     let items = countries.filter(item => {return ((item.region.toLowerCase().includes(search)) || item.name.toLowerCase().includes(search)) === true})
         .map(item => {return (<Country key={item.name} country={item} handleModal={handleModal}/>)});
@@ -69,11 +69,36 @@ export const CountriesList = () => {
                     <div className="modal">
                         <button className="button-primary" onClick={(e)=>{e.preventDefault(); setModal(false)}}>Back</button>
                         <div className="row">
-                            <div className="six colunms modal-fla">
-                                <img src={info.flag} alt={info.name}/>
+                            <div className="six columns modal-flag">
+                                <img src={info.flag} alt={info.name} className='modalflag'/>
+                                kii
                             </div>
-                            <div className="six colunms modal-content">
-                                <h3>{info.name}i</h3>
+                            <div className="six columns modal-content">
+                                <h3>{info.name}</h3>
+                                <div className="info-content">
+                                    <div className="info1">
+                                        <p><strong>Native Name:</strong> <span>{info.nativeName}</span></p>
+                                        <p><strong>Population:</strong> <span>{info.population}</span></p>
+                                        <p><strong>Region:</strong> <span>{info.region}</span></p>
+                                        <p><strong>Sub Region</strong>: <span>{info.subregion}</span></p>
+                                        <p><strong>Capital:</strong> <span>{info.capital}</span></p>
+                                    </div>
+                                    <div className="info2">
+                                        <p><strong>Top Level Domain:</strong> <span>{info.topLevelDomain}</span></p>
+                                        <p><strong>Currencies: </strong> {info.currencies ? info.currencies.map((currency, index) => (<span>{currency.name + (index ? ', ' : '')}</span>)) : ""}</p>
+                                        <p><strong>Languages: </strong><span>{info.capital}</span></p>
+                                    </div>
+                                </div>
+                                <div><p><strong>Border Countries:</strong></p>{info.borders ? 
+                                    countries.map((country) => {
+                                              for (const item of info.borders){
+                                            if(item===country.alpha3Code){
+                                               return (<a class="button" href="#">{country.name }</a>)                       
+                                            }
+                                        }
+                                    }) : ""
+                                }         
+                                </div>
                             </div>
                         </div>
                     </div></Modal>

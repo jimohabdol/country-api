@@ -5,7 +5,7 @@ export const Country = ({country, handleModal}) => {
             <div className="three columns country">
                 <div className='card' onClick={() => handleModal(country.name)}>
                     <div className="country-flag u-full-width">
-                        <img src={country.flag} alt={country.name}/>
+                        <img className="country.img" src={country.flag} alt={country.name}/>
                     </div>
                     <div class="info-card">
                         <h5 class="country-name">{country.name}</h5>
