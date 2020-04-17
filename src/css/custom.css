@@ -24,6 +24,16 @@ main {
     background-color: var(--backgroundColor);
 }
 
+.switch {
+    position: relative;
+    text-align: end;
+}
+
+.switch img.mode {
+    position: absolute;
+    right: 36%;
+    top: -3px;
+}
 .search {
     box-shadow: var(--boxShadow);
     border: 0;
@@ -31,6 +41,7 @@ main {
     padding: 20px;
     border-radius: 5px;
 }
+
 
 .dropdown {
     position: relative;
@@ -129,6 +140,11 @@ main {
 }
 
 @media (min-width: 550px) {
+
+    p {
+        background-color: green;
+    }
+
     .row.filter-bar {
         padding: 4% 0 4% 4%;
     }

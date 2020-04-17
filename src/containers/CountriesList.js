@@ -48,7 +48,7 @@ export const CountriesList = () => {
             <section className="container">
                 <div className="row filter-bar">
                     <div className="ten columns"> 
-                        <input className="search" id="search" type="text" placeholder="Search for a country" name="search" value={search} onChange={handleSearch}/>
+                        <input className="search u-full-width" id="search" type="text" placeholder="Search for a country" name="search" value={search} onChange={handleSearch}/>
                     </div>
                     <div className="two columns dropdown" id="dropdown" onClick={()=>{setIsOpen(!isOpen)}}>
                         <p>Filter by Region</p>
